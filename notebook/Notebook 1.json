@@ -1,0 +1,62 @@
+{
+	"name": "Notebook 1",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "default",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "2d12ff81-5ce8-41d4-baff-e279582f7e3b"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/9c8ed5ce-bc29-4be8-916e-c94e7f29b315/resourceGroups/azure-synapse/providers/Microsoft.Synapse/workspaces/synapse-anup/bigDataPools/default",
+				"name": "default",
+				"type": "Spark",
+				"endpoint": "https://synapse-anup.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/default",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.1",
+				"nodeCount": 10,
+				"cores": 4,
+				"memory": 28,
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"%%pyspark\n",
+					"df = spark.sql(\"SELECT * FROM `data_db`.`ger_fact`\")\n",
+					"# df.show(10)"
+				],
+				"execution_count": 1
+			}
+		]
+	}
+}
