@@ -1,0 +1,22 @@
+{
+	"name": "data_db",
+	"properties": {
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Name": "data_db",
+		"EntityType": "DATABASE",
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://azure-synapse-fs@anupadlsv2.dfs.core.windows.net/data_db",
+			"Properties": {
+				"FormatType": "csv",
+				"LinkedServiceName": "synapse-anup-WorkspaceDefaultStorage"
+			}
+		}
+	},
+	"type": "DATABASE"
+}
