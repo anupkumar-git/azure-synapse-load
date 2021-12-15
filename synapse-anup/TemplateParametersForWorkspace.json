@@ -5,10 +5,10 @@
 		"workspaceName": {
 			"value": "synapse-anup"
 		},
-		"synapse-anup-WorkspaceDefaultSqlServer_connectionString": {
+		"AzureBlobStorageLinkedService_connectionString": {
 			"value": ""
 		},
-		"AzureBlobStorageLinkedService_connectionString": {
+		"synapse-anup-WorkspaceDefaultSqlServer_connectionString": {
 			"value": ""
 		},
 		"synapse-anup-WorkspaceDefaultStorage_properties_typeProperties_url": {
